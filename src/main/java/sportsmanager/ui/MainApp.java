@@ -61,7 +61,10 @@ import java.util.function.Supplier;
 
 public class MainApp extends Application {
 
-    private static final String SAVE_DIR = "saves";
+    // Absolute, user-writable location so saves work no matter where the game
+    // is installed/launched from (a relative "saves" folder breaks under Program Files).
+    private static final String SAVE_DIR =
+            System.getProperty("user.home") + File.separator + "SportsManager" + File.separator + "saves";
     private static final int SLOT_COUNT = 3;
 
     private Stage primaryStage;

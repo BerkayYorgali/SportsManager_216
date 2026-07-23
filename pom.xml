@@ -72,6 +72,9 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <!-- Always produce target/SportsManager.jar (version-independent) -->
+                    <finalName>SportsManager</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
                             <mainClass>sportsmanager.ui.Launcher</mainClass>
